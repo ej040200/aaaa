@@ -9,15 +9,19 @@
 <h1>hi</h1>
 
 <script>
-  function populate() {
-    while(true) {
-      let windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
-      if (windowRelativeBottom > document.documentElement.clientHeight + 100);
-      document.body.insertAdjacentHTML("beforeend", `<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>`);
-    }
-  }
+ function populate() {
+  while(true) {
+    // document bottom
+    let windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
 
-  window.addEventListener('scroll', populate);
+    // if the user hasn't scrolled far enough (>100px to the end)
+    if (windowRelativeBottom > document.documentElement.clientHeight + 100) break;
+
+    // let's add more data
+    document.body.insertAdjacentHTML("beforeend", `<p>Date: ${new Date()}</p>`);
+  }
+}
+   window.addEventListener('scroll', populate);
 
   populate(); // init document
 </script>
