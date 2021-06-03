@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>katia</title>
 <body>
+    <div id="div1">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+</div>
 
 <script>
 function scroller() {
-    // print relevant scroll info
-    test.innerHTML = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa;
-
-    // add more contents if user scrolled down enough
-    if(wrapper.scrollTop+wrapper.offsetHeight+"a">content.offsetHeight) {
-      content.innerHTML+= more;
-addEvent(wrapper,"scroll",scroller);
+   var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+    
+var element = document.getElementById("div1");
+element.appendChild(para);
 }
 </script>
 
