@@ -14,9 +14,9 @@ window.addEventListener('scroll',function(){
 function createPost(){
   var post = document.createElement('div');
     post.className = 'text';
-    container.appendChild(post);
     document.createElement('p');
     p.innerHTML = 'ааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа'
+        container.appendChild(post);
 }
 //ES6 CODE:
 // const container = document.querySelector('.container');
