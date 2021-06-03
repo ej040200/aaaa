@@ -7,7 +7,7 @@ window.addEventListener('scroll',function(){
     var scrollTop = document.documentElement.scrollTop;
     var clientHeight = document.documentElement.clientHeight;
 
-  if( (scrollTop + clientHeight) > (scrollHeight - 5))
+  if( (scrollTop + clientHeight) > (scrollHeight - 1))
 });
 // The createPost function creates The HTML for the blog post.
 // It append it to the container.
