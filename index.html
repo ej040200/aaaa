@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <lang = ru>
+</head>
+
+<body>
+
+<h1>О дааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа</h1>
+
+<script>
+ function populate() {
+  while(true) {
+    // document bottom
+    let windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
+
+    // if the user hasn't scrolled far enough (>100px to the end)
+    if (windowRelativeBottom > document.documentElement.clientHeight + 100) break;
+
+    // let's add more data
+    document.body.insertAdjacentHTML("beforeend", `<p>аааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа</p>`);
+  }
+}
+   window.addEventListener('scroll', populate);
+
+  populate(); // init document
+</script>
+
+</body>
+</html>
